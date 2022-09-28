@@ -25,38 +25,40 @@
 wget -O ollo.sh https://raw.githubusercontent.com/pusulafinanslabs/Ollo-Station/main/ollo.sh && chmod +x ollo.sh && ./ollo.sh
 ```
 
-### Log kontrol komutundan sonra log komutu tepki vermiyorsa şu komutu girip ardından yeniden log kontrol yapın.
+### Log kontrol komutu
 
 ```
-systemctl restart systemd-journald
+journalctl -fu ollod -o cat
 ```
 
 ### Sync Durumunuzu öğrenmek için;
 
 ```
-strided status 2>&1 | jq .SyncInfo
+ollod status 2>&1 | jq .SyncInfo
 ```
 
 ### Cüzdan oluşturma: (not edin kaydedin)
 ```
-strided keys add cüzdanismi
+ollod keys add CUZDANISMI
 ```
 
-### Faucet için; Discorda katılmayı unutmayın. ( https://discord.gg/ggQewkUa )
+### Faucet için; Discorda katılmayı unutmayın. ( https://discord.gg/TrPSz3bn )
 
 ### Validator Olmak İçin;
 
 ```
-strided tx staking create-validator \
-  --amount 9900000ustrd \
-  --from cüzdanisminiz \
+ollod tx staking create-validator \
+  --amount 49500000utollo \
+  --from CUZDANISMI \
   --commission-max-change-rate "0.01" \
   --commission-max-rate "0.2" \
   --commission-rate "0.07" \
   --min-self-delegation "1" \
-  --pubkey  $(strided tendermint show-validator) \
-  --moniker nodeisminiz \
-  --chain-id=STRIDE-TESTNET-4 
+  --pubkey  $(ollod tendermint show-validator) \
+  --details="Kendini Tanıt" \
+  --website="website veya mail adresi" \
+  --moniker NodeName \
+  --chain-id ollo-testnet-0
 ```
 
 ### Explorer
