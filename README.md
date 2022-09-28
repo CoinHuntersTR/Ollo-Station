@@ -22,7 +22,7 @@
 ### Kuruluma başlayalım.
 
 ```
-wget -O ollo.sh https://raw.githubusercontent.com/pusulafinanslabs/Ollo-Station/main/ollostation.sh && chmod +x ollo.sh && ./ollo.sh
+wget -O ollo.sh https://raw.githubusercontent.com/pusulafinanslabs/Ollo-Station/main/ollo.sh && chmod +x ollo.sh && ./ollo.sh
 ```
 
 ### Log kontrol komutundan sonra log komutu tepki vermiyorsa şu komutu girip ardından yeniden log kontrol yapın.
@@ -62,42 +62,12 @@ strided tx staking create-validator \
 ### Explorer
 
 ```
-https://stride.explorers.guru/
+https://explorer.kjnodes.com/ollo/staking
 ```
 
 ### Discorddan Role-Request Odasına Explorerdan validator linkinizi atıp rol almayı unutmayın.
 
-## Stride Önemli Komutlar
-
-### Cüzdandan cüzdana token transfer
-
-```
-strided tx bank send gönderencüzdanadresi alıcıcüzdanadresi 1000000ustrd --chain-id=STRIDE-TESTNET-4 --from cüzdanisminiz --fees=250ustrd -y
-```
-
-### Kendi validatorumuze delege etme
-
-```
-strided tx staking delegate validatorAddress 10000000ustrd --from=WalletName --chain-id=STRIDE-TESTNET-4 --gas=auto
-```
-
-### Redelege yapma
-
-```
-strided tx staking redelegate gönderenvalidatoradres alıcıvalidatoradres 1000000ustrd --chain-id=STRIDE-TESTNET-4 --from cüzdan --gas=250000 --fees=500ustrd -y
-```
-
-### Log kontrol
-
-```
-journalctl -u strided -f -o cat
-```
-
-### Sync durumu
-
-```
-curl -s localhost:16657/status | jq .result.sync_info
-```
+## Ollo Station için Önemli Komutlar
 
 ### Unjail komutu
 
