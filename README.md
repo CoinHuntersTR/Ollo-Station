@@ -67,26 +67,32 @@ ollod tx staking create-validator \
 https://explorer.kjnodes.com/ollo/staking
 ```
 
-### Discorddan Role-Request Odasına Explorerdan validator linkinizi atıp rol almayı unutmayın.
+### Discorddan Role Odasından rol almayı unutmayın!!
 
 ## Ollo Station için Önemli Komutlar
 
 ### Unjail komutu
 
 ```
-strided tx slashing unjail --from=Cüzdanismi --chain-id=STRIDE-TESTNET-4 --gas-prices=0.025ustrd
+ollod tx slashing unjail --from=CUZDANISMI --chain-id=ollo-testnet-0 --gas-prices=0.025utollo
+```
+
+### Peer komutu
+
+```
+echo "$(ollod tendermint show-node-id)@$(curl ifconfig.me):32657"
 ```
 
 ### Node'u silmek için gerekli komut
 
 ```
-sudo systemctl stop strided
-sudo systemctl disable strided
-sudo rm /etc/systemd/system/stride* -rf
-sudo rm $(which strided) -rf
-sudo rm $HOME/.stride* -rf
-sudo rm $HOME/stride -rf
-sed -i '/STRIDE_/d' ~/.bash_profile
+sudo systemctl stop ollod
+sudo systemctl disable ollod
+sudo rm /etc/systemd/system/ollo* -rf
+sudo rm $(which ollod) -rf
+sudo rm $HOME/.ollo* -rf
+sudo rm $HOME/ollo -rf
+sed -i '/OLLO_/d' ~/.bash_profile
 ```
 
 ### Kolay Gelsin..
