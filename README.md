@@ -1,6 +1,6 @@
 # Ollo Station Node Testneti
 
-<img width="431" alt="stride111" src="https://user-images.githubusercontent.com/107190154/184557695-bc92418f-1eb8-4514-ae06-d89802efda9a.png">
+![1_SdfNCpGceClqhW9oDrJ9SQ](https://user-images.githubusercontent.com/111747226/192885867-b9efe612-681b-4461-8ce5-7e306a7ed237.png)
 
 
 
@@ -22,7 +22,7 @@
 ### Kuruluma başlayalım.
 
 ```
-wget -O stride.sh https://raw.githubusercontent.com/pusulafinanslabs/Stride-Testnet-4/main/stride.sh && chmod +x stride.sh && ./stride.sh
+wget -O ollo.sh https://raw.githubusercontent.com/pusulafinanslabs/Ollo-Station/main/ollostation.sh && chmod +x ollo.sh && ./ollo.sh
 ```
 
 ### Log kontrol komutundan sonra log komutu tepki vermiyorsa şu komutu girip ardından yeniden log kontrol yapın.
